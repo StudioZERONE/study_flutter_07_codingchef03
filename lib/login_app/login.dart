@@ -28,39 +28,21 @@ class Login extends StatelessWidget {
         children: [
           MyButton(
             image: Image.asset('images/glogo.png'),
-            text: const Text(
-              'Login with Google',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15,
-              ),
-            ),
+            text: 'Login with Google',
             color: Colors.white,
             radius: 4,
             onPressed: () {},
           ),
           MyButton(
             image: Image.asset('images/flogo.png'),
-            text: const Text(
-              'Login with Google',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15,
-              ),
-            ),
+            text: 'Login with Google',
             color: Colors.blue,
             radius: 4,
             onPressed: () {},
           ),
           MyButton(
             image: Image.asset('images/flogo.png'), //Icons.email_rounded,
-            text: const Text(
-              'Login with Email',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 15,
-              ),
-            ),
+            text: 'Login with Email',
             color: Colors.green,
             radius: 4,
             onPressed: () {},

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class MyButton extends StatelessWidget {
   final Widget image;
-  final Widget text;
+  final String text;
   final Color color;
   final double radius;
   final VoidCallback onPressed;
@@ -28,10 +28,22 @@ class MyButton extends StatelessWidget {
               borderRadius: BorderRadius.all(Radius.circular(radius)),
             ))),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            const SizedBox(
+              width: 20,
+            ),
             image,
-            text,
+            const SizedBox(
+              width: 20,
+            ),
+            Text(
+              text,
+              style: const TextStyle(
+                color: Colors.black87,
+                fontSize: 15,
+              ),
+            ),
             Opacity(
               opacity: 0,
               child: image,
