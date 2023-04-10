@@ -35,10 +35,11 @@ void main() {
   showData();
 }
 
-void showData() {
+void showData() async {
   startTask();
-  accessData();
-  fetchData();
+  String account = await accessData();
+  fetchData(account);
+  log('end');
 }
 
 void startTask() {
@@ -46,20 +47,25 @@ void startTask() {
   log(info1);
 }
 
-void accessData() {
-  String account;
+Future<String> accessData() async {
+  String account = '';
 
   Duration time = const Duration(seconds: 3);
 
   if (time.inSeconds > 2) {
-    Future.delayed(time, () {
-      String info2 = '데이터에 접속 중';
-      log(info2);
+    await Future.delayed(time, () {
+      account = '8,500만원';
+      log(account);
     });
+  } else {
+    String info2 = '데이터에 접속 중';
+    log(info2);
   }
+
+  return account;
 }
 
-void fetchData() {
-  String info3 = '잔액은 8,500만원입니다.';
+void fetchData(String account) {
+  String info3 = '잔액은 $account입니다.';
   log(info3);
 }
