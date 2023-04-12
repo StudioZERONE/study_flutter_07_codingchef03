@@ -21,6 +21,11 @@ class Login extends StatelessWidget {
   }
 
   Widget buildButton() {
+    forward(5);
+    test1();
+    test2();
+    test3();
+    test4();
     return Padding(
       padding: const EdgeInsets.all(16),
       child: Column(
@@ -53,5 +58,48 @@ class Login extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+void forward(int move) {
+  print('--- forward($move) -------------');
+  for (int i = 1; i <= move; i++) {
+    print('$i칸 이동했습니다.');
+  }
+}
+
+void test1() {
+  print('--- test1() -------------');
+  List<String> rainbow = ['빨, 주, 노, 초, 파, 남, 보'];
+
+  for (int i = 0; i < rainbow.length; i++) {
+    print(rainbow[i]);
+  }
+}
+
+void test2() {
+  print('--- test2() -------------');
+  List<String> rainbow = ['빨', '주', '노', '초', '파', '남', '보'];
+
+  for (int i = 0; i < rainbow.length; i++) {
+    print(rainbow[i]);
+  }
+}
+
+void test3() {
+  print('--- test3() -------------');
+  List<String> rainbow = ['빨', '주', '노', '초', '파', '남', '보'];
+
+  for (String x in rainbow) {
+    print(x);
+  }
+}
+
+void test4() {
+  print('--- test4() -------------');
+  List<String> rainbow = ['빨', '주', '노', '초', '파', '남', '보'];
+
+  for (var name in rainbow) {
+    print(name);
   }
 }
