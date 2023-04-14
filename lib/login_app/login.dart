@@ -27,6 +27,7 @@ class Login extends StatelessWidget {
     test2();
     test3();
     test4();
+    testListGenerate();
 
     Set<int> lottoFinal = lottoNumber();
     Set<int> myFinal = myNumber();
