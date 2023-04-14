@@ -54,11 +54,11 @@ void testListGenerate() {
   var test = [];
 
   print('List<int> 자연수 45개 생성 ------------------');
-  test = List<int>.generate(45, (index) => index++);
+  test = List<int>.generate(45, (index) => ++index);
   print(test);
 
   print('List<int> 자연수 45개 생성 후 shuffle ------------------');
-  test = List<int>.generate(45, (index) => index++)..shuffle();
+  test = List<int>.generate(45, (index) => ++index)..shuffle();
   print(test);
 
   print('List<int> 자연수 45개 생성 후 shuffle 후 6개 발췌 ------------------');
