@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:study_flutter_07_codingchef03/login_app/lotto_number.dart';
+import 'package:study_flutter_07_codingchef03/login_app/test_future.dart';
 import 'package:study_flutter_07_codingchef03/my_button/my_button.dart';
 
 class Login extends StatelessWidget {
@@ -22,17 +23,18 @@ class Login extends StatelessWidget {
   }
 
   Widget buildButton() {
+    Set<int> lottoFinal = lottoNumber();
+    Set<int> myFinal = myNumber();
+
+    checkNumber(lottoFinal, myFinal);
+
     forward(5);
     test1();
     test2();
     test3();
     test4();
     testListGenerate();
-
-    Set<int> lottoFinal = lottoNumber();
-    Set<int> myFinal = myNumber();
-
-    checkNumber(lottoFinal, myFinal);
+    testFuture();
 
     return Padding(
       padding: const EdgeInsets.all(16),
