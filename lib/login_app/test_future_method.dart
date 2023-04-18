@@ -20,9 +20,11 @@ methodB() async {
 methodC(String from) async {
   print('C start from $from');
   Future(() {
+    print('---- Future Start: $from ----');
     print('C running Future from $from');
   }).then((_) {
     print('C end of Future from $from');
+    print('---- Future Then end: $from ----');
   });
   print('C end from $from');
 }
