@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:study_flutter_07_codingchef03/login_app/lotto_number.dart';
 import 'package:study_flutter_07_codingchef03/login_app/test_future.dart';
+import 'package:study_flutter_07_codingchef03/login_app/test_future_Home.dart';
 import 'package:study_flutter_07_codingchef03/login_app/test_future_method.dart';
 import 'package:study_flutter_07_codingchef03/my_button/my_button.dart';
 
@@ -44,6 +45,19 @@ class Login extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          MyButton(
+            image: Image.asset('images/glogo.png'),
+            text: 'Test Future Home',
+            bgcolor: Colors.grey.shade300,
+            txtcolor: Colors.black87,
+            radius: 4,
+            onPressed: () {
+              const TestFutureHome();
+            },
+          ),
+          const SizedBox(
+            height: 100,
+          ),
           MyButton(
             image: Image.asset('images/glogo.png'),
             text: 'Login with Google',
